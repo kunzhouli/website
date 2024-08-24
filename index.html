@@ -1,63 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        .image-container {
-            text-align: center;
-        }
-        .text-content {
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-family: 'Segoe UI', sans-serif;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-family: 'Segoe UI', sans-serif;
-        }
-        .button-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .cf-turnstile {
-            margin-left: 20px;
-        }
-    </style>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome_page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="image-container">
-        <div class="text-content">
-            <h1 id="welcome">WELCOME</h1>
-        </div>
-        <div class="button-container">
-            <a href="index_true.html" class="button" id="enter-button" disabled>Click to enter</a>
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAh-ck9Z3kRdurup"></div>
-        </div>
+  <div class="image-container">
+    <div class="text-content">
+      <h1 style="font-family: 'Segoe UI', sans-serif;">WELCOME</h1>
+      <a href="index_true.html" class="button">Click to enter</a>
     </div>
-
-    <script>
-        window.onloadTurnstileCallback = function() {
-            document.getElementById("enter-button").disabled = false;
-        }
-    </script>
+  </div>
 </body>
 </html>
