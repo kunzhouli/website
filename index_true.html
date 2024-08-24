@@ -7,78 +7,164 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
         .container {
-            max-width: 1200px;
+            width: 80%;
             margin: auto;
+            overflow: hidden;
             padding: 20px;
         }
         header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #bbb 1px solid;
         }
-        nav {
-            background-color: #444;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
+        header a {
+            color: #fff;
             text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
         }
-        nav a:hover {
-            background-color: #555;
+        header ul {
+            padding: 0;
+            list-style: none;
         }
-        section {
-            background-color: white;
-            padding: 20px;
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .section {
             margin-bottom: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>资源导航网站</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#categories">分类目录</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>资源导航网站</h1>
-            <p>您的学习和工作伙伴</p>
-        </header>
-        <nav>
-            <a href="#home">首页</a>
-            <a href="#categories">分类目录</a>
-            <a href="#about">关于我们</a>
-            <a href="#contact">联系我们</a>
-        </nav>
-        <section id="home">
+        <div id="home" class="section">
             <h2>欢迎来到资源导航网站</h2>
             <p>我们提供各种高质量的学习资源和工具链接，帮助您提高效率。</p>
-        </section>
-        <section id="categories">
+        </div>
+
+        <div id="categories" class="section">
             <h2>分类目录</h2>
             <ul>
-                <li><a href="#">学习资源</a></li>
-                <li><a href="#">工具与软件</a></li>
-                <li><a href="#">编程教程</a></li>
-                <li><a href="#">设计素材</a></li>
+                <li><a href="#learning-resources">学习资源</a></li>
+                <li><a href="#tools-software">工具与软件</a></li>
+                <li><a href="#programming-tutorials">编程教程</a></li>
+                <li><a href="#design-resources">设计素材</a></li>
             </ul>
-        </section>
-        <footer>
-            &copy; 2024 资源导航网站. All rights reserved.
-        </footer>
+        </div>
+
+        <div id="about" class="section">
+            <h2>关于我们</h2>
+            <p>资源导航网站成立于2020年，致力于为用户提供优质的在线学习和工作资源。我们的团队由经验丰富的教育工作者和IT专业人士组成，不断更新和筛选最有价值的资源。</p>
+            <h3>我们的使命</h3>
+            <ul>
+                <li>提供高质量的学习资源</li>
+                <li>帮助用户提高学习和工作效率</li>
+                <li>促进知识共享和交流</li>
+            </ul>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>联系我们</h2>
+            <p>如果您有任何问题、建议或合作意向，请通过以下方式联系我们：</p>
+            <ul>
+                <li>邮箱：info@resourcenav.com</li>
+                <li>电话：+86 123 4567 8900</li>
+                <li>地址：中国北京市海淀区科技园路100号</li>
+            </ul>
+            <form>
+                <label for="name">姓名：</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">邮箱：</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">留言：</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">发送</button>
+            </form>
+        </div>
+
+        <div id="learning-resources" class="section">
+            <h2>学习资源</h2>
+            <ul>
+                <li><a href="#">在线课程平台</a></li>
+                <li><a href="#">电子书库</a></li>
+                <li><a href="#">教育博客</a></li>
+                <li><a href="#">学术论文数据库</a></li>
+                <li><a href="#">语言学习资源</a></li>
+            </ul>
+        </div>
+
+        <div id="tools-software" class="section">
+            <h2>工具与软件</h2>
+            <ul>
+                <li><a href="#">生产力工具</a></li>
+                <li><a href="#">设计软件</a></li>
+                <li><a href="#">项目管理工具</a></li>
+                <li><a href="#">协作平台</a></li>
+                <li><a href="#">开发者工具</a></li>
+            </ul>
+        </div>
+
+        <div id="programming-tutorials" class="section">
+            <h2>编程教程</h2>
+            <ul>
+                <li><a href="#">Python 入门到进阶</a></li>
+                <li><a href="#">Web 开发基础</a></li>
+                <li><a href="#">数据结构与算法</a></li>
+                <li><a href="#">机器学习教程</a></li>
+                <li><a href="#">移动应用开发</a></li>
+            </ul>
+        </div>
+
+        <div id="design-resources" class="section">
+            <h2>设计素材</h2>
+            <ul>
+                <li><a href="#">图标库</a></li>
+                <li><a href="#">字体资源</a></li>
+                <li><a href="#">图片素材</a></li>
+                <li><a href="#">UI 组件</a></li>
+                <li><a href="#">配色方案</a></li>
+            </ul>
+        </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 资源导航网站. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
